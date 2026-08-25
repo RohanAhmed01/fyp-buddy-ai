@@ -21,8 +21,7 @@ FYP-Buddy is a **Gemini Pro-powered vetting engine** that does what Micro1 does 
 - **Data Handling:** Native Python/Pandas parsing
 
 ### Demo (2-min Video - Coming Soon on Aug 30)
-Live Demo: [Streamlit Link Coming Soon]
-Video: [YouTube Link Coming Soon]
+Live Demo: https://fyp-buddy-ai-edaamwbjjm5ipcfypkezje.streamlit.app/ 
 
 ### How to Run
 ```bash
