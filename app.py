@@ -23,7 +23,7 @@ if st.button("Fix My Code"):
         with st.spinner("Fixing..."):
             try:
                 response = client.models.generate_content(
-                    model="gemini-2.0-flash",
+                    model="gemini-3.6-flash",
                     contents=f"{BUG_PROMPT}\n\nCode:\n{code}\n\nError:\n{error}"
                 )
                 st.success("Fixed!")
