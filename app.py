@@ -1,47 +1,32 @@
 import streamlit as st
-import google.generativeai as genai
 
-st.set_page_config(page_title="FYP Buddy v2", page_icon="🤖", layout="centered")
+st.set_page_config(page_title="FYP Buddy - No API", page_icon="🤖")
+st.title("🤖 FYP Buddy - Direct Gemini Pro")
+st.caption("No API | No Billing | No Card Needed")
 
-st.title("🤖 FYP Buddy v2.0")
-st.caption("AI Code Debugger for FYP Students - Final Version")
+code = st.text_area("📋 Apna Code Paste Karo:", height=200)
+error = st.text_area("❌ Error (agar hai):", height=100)
 
-# API Key
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-1.5-flash")
+if st.button("✨ Perfect Prompt Banao"):
+    if code:
+        prompt = f"""Act as FYP Supervisor. Fix this code.
 
-# UI
-code_input = st.text_area("📋 Apna Code Yahan Paste Karo:", height=200, placeholder="def add(a,b)\n    return a + b")
-error_input = st.text_area("❌ Error (Agar ho to):", height=100, placeholder="SyntaxError: expected ':'")
+CODE:
+{code}
 
-col1, col2 = st.columns(2)
-with col1:
-    fix_btn = st.button("🚀 Fix My Code", use_container_width=True)
-with col2:
-    explain_btn = st.button("📖 Explain in Urdu", use_container_width=True)
+ERROR:
+{error}
 
-if fix_btn and code_input:
-    with st.spinner("AI Fix kar raha hai..."):
-        prompt = f"""
-        You are FYP Buddy. Fix this student code.
-        Code: {code_input}
-        Error: {error_input}
-        Give:
-        1. Fixed Code (only python)
-        2. Error ki wajah 1 line mai
-        """
-        try:
-            response = model.generate_content(prompt)
-            st.success("✅ Fixed!")
-            st.code(response.text, language="python")
-        except Exception as e:
-            st.error(f"Error: {e}")
-
-if explain_btn and code_input:
-    with st.spinner("Explain kar raha hun..."):
-        prompt = f"Is code ko simple Urdu/English mix mai explain karo FYP student ke liye: {code_input}"
-        response = model.generate_content(prompt)
-        st.info(response.text)
-
-st.markdown("---")
-st.markdown("Made for Hackathon | No Billing Needed | 100% Working")
+YOUR TASK:
+1. Give ONLY fixed working code with comments
+2. Explain bug in 1 line simple Urdu
+3. Keep simple for FYP student
+Fix it now:"""
+        
+        st.success("✅ Prompt Ready! Copy karo:")
+        st.code(prompt, language="markdown")
+        st.markdown("### 👇 Ab ye karo:")
+        st.markdown("1. Upar wala prompt Copy karo")
+        st.markdown("2. Jao 👉 https://gemini.google.com")
+        st.markdown("3. Paste karo - Fixed code mil jayega!")
+        st.link_button("🚀 Open Gemini Pro", "https://gemini.google.com")
