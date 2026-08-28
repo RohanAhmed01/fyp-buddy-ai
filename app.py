@@ -4,10 +4,10 @@ st.set_page_config(page_title="FYP Buddy - No API", page_icon="🤖")
 st.title("🤖 FYP Buddy - Direct Gemini Pro")
 st.caption("No API | No Billing | No Card Needed")
 
-code = st.text_area("📋 Apna Code Paste Karo:", height=200)
-error = st.text_area("❌ Error (agar hai):", height=100)
+code = st.text_area("📋 Paste your code here 👇:", height=200)
+error = st.text_area("❌ Error (if any):", height=100)
 
-if st.button("✨ Perfect Prompt Banao"):
+if st.button("✨ Generate perfect prompt"):
     if code:
         prompt = f"""Act as FYP Supervisor. Fix this code.
 
@@ -23,10 +23,10 @@ YOUR TASK:
 3. Keep simple for FYP student
 Fix it now:"""
         
-        st.success("✅ Prompt Ready! Copy karo:")
+        st.success("✅ Prompt Ready! Copy code:")
         st.code(prompt, language="markdown")
-        st.markdown("### 👇 Ab ye karo:")
-        st.markdown("1. Upar wala prompt Copy karo")
+        st.markdown("### 👇 Now do this:")
+        st.markdown("1. Copy the upper code")
         st.markdown("2. Jao 👉 https://gemini.google.com")
-        st.markdown("3. Paste karo - Fixed code mil jayega!")
+        st.markdown("3. Paste it - Fixed code will be given!")
         st.link_button("🚀 Open Gemini Pro", "https://gemini.google.com")
