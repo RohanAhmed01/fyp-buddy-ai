@@ -19,7 +19,7 @@ ERROR:
 
 YOUR TASK:
 1. Give ONLY fixed working code with comments
-2. Explain bug in 1 line simple Urdu
+2. Explain bug in 1 line simple English
 3. Keep simple for FYP student
 Fix it now:"""
         
@@ -27,6 +27,6 @@ Fix it now:"""
         st.code(prompt, language="markdown")
         st.markdown("### 👇 Now do this:")
         st.markdown("1. Copy the upper code")
-        st.markdown("2. Jao 👉 https://gemini.google.com")
-        st.markdown("3. Paste it - Fixed code will be given!")
+        st.markdown("2. Go to 👉 https://gemini.google.com")
+        st.markdown("3. Paste it - Fixed code will be generated!")
         st.link_button("🚀 Open Gemini Pro", "https://gemini.google.com")
