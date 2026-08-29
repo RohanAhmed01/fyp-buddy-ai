@@ -9,6 +9,8 @@ st.title("🤖 FYP Buddy - Autonomous Code Agent")
 st.caption("Micro1 Hackathon | Powered by Groq (Free Tier, No Card Required)")
 
 api_key = st.text_input("Enter your Free Groq API Key (starts with gsk_):", type="password")
+if api_key:
+    api_key = api_key.strip()
 
 def extract_python_code(text: str) -> str:
     """Extracts clean python code from markdown blocks."""
