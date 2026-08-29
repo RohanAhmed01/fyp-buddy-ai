@@ -90,7 +90,7 @@ Rules:
                         {"role": "system", "content": "You are a code repair agent. Always return code inside ```python blocks."},
                         {"role": "user", "content": current_prompt}
                     ],
-                    model="llama3-70b-8192",
+                    model="openai/gpt-oss-120b",
                     temperature=0.2,
                 )
                 
