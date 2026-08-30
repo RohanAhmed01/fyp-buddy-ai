@@ -1,4 +1,4 @@
-🟢 **Live App:** https://fyp-buddy-ai-eyuujnnycrh84fjkvait8n.streamlit.app/
+🟢 **Live App :** https://fyp-buddy-ai-eyuujnnycrh84fjkvait8n.streamlit.app/
 
 # 🤖 FYP Buddy - Autonomous Code Repair Agent
 
