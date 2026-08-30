@@ -5,8 +5,8 @@ Follow these steps to run the FYP Buddy agent locally in a clean environment.
 **1. Clone the Repository**
 Open your terminal and clone the project:
 ```bash
-git clone <YOUR-GITHUB-REPO-URL>
-cd <YOUR-REPO-FOLDER>
+git clone https://github.com/RohanAhmed01/fyp-buddy-ai.git
+cd fyp-buddy-ai
 ```
 
 **2. Install Dependencies**
