@@ -1,3 +1,5 @@
+🟢 **Live App Demo:** https://fyp-buddy-ai-eyuujnnycrh84fjkvait8n.streamlit.app/
+
 # 🤖 FYP Buddy - Autonomous Code Repair Agent
 
 FYP Buddy is an autonomous agentic debugging workflow designed to help computer science and data science students resolve runtime and syntax errors without manual prompt-engineering loops.
